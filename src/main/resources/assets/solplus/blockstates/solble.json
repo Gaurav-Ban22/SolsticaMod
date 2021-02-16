@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "solplus:block/solble" }
+  }
+}

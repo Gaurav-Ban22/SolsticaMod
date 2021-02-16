@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "solplus:solble"
+  },
+  "result": "solplus:solstica",
+  "experience": 1.0,
+  "cookingtime": 140
+}

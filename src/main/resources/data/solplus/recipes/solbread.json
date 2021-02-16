@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "solplus:solstica"
+    },
+    {
+      "item": "minecraft:bread"
+    }
+  ],
+  "result":
+  {
+    "item": "solplus:solbread",
+    "count": 3
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "solplus:peat"
+  },
+  "result": "minecraft:coal_block",
+  "experience": 1.0,
+  "cookingtime": 100
+}
