@@ -1,5 +1,20 @@
 {
   "item.solplus.solstica": "Solstica",
+  "item.solplus.gbiscuit": "Grained Biscuit",
+  "item.solplus.grice": "Golden Rice",
+  "item.solplus.msponge": "Milky Sponge Bread",
+  "item.solplus.rice": "Rice",
+  "item.solplus.capple": "Caramel Apple",
+  "item.solplus.euc": "Eucalyptyde",
+  "item.solplus.irepair": "Item Repair Scroll",
+  "item.solplus.mscroll": "Miner's Scroll",
+  "item.solplus.jscroll": "Jumper's Scroll",
+  "item.solplus.irice": "Iron Rice",
+  "item.solplus.lrice": "Lapis Rice",
+  "item.solplus.mirrice": "Miracle Rice",
+  "item.solplus.ecookie": "Eggy Cookie",
+  "item.solplus.price": "Potato Curry Rice",
+  "item.solplus.oakrice": "Oak Leaf Rice",
   "block.solplus.solblock": "Solstica Block",
   "block.solplus.peat": "Peat Chunk",
   "block.solplus.solble": "Solstblende",
@@ -8,6 +23,7 @@
   "item.solplus.solchest": "Solstica Chestplate",
   "item.solplus.solpant": "Solstica Leggings",
   "item.solplus.solboot": "Solstica Boots",
+  "item.solplus.lifesword": "Lifesteal Claymore",
   "item.solplus.regenam": "Solstica Regeneration Amulet",
   "item.solplus.solbread": "SolBread"
 }

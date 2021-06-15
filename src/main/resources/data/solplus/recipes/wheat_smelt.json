@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:wheat"
+  },
+  "result": "solplus:rice",
+  "experience": 1.0,
+  "cookingtime": 60
+}

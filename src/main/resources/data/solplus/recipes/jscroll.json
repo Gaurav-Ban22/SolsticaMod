@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    " r ",
+    "rpr",
+    " r "
+  ],
+  "key":
+  {
+    "r":
+    {
+      "item": "solplus:euc"
+    },
+    "p":
+    {
+      "item": "minecraft:paper"
+    }
+  },
+  "result":
+  {
+    "item": "solplus:jscroll",
+    "count": 1
+  }
+}

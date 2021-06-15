@@ -15,6 +15,8 @@ public class SolBlock extends Block {
                 .sound(SoundType.SCAFFOLDING)
                 .harvestLevel(3)
                 .harvestTool(ToolType.PICKAXE)
+                .setLightLevel(value -> 15)
+                .setRequiresTool()
 
 
         );

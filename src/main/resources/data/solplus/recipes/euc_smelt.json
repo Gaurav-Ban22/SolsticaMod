@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:oak_leaves"
+  },
+  "result": "solplus:euc",
+  "experience": 1.0,
+  "cookingtime": 100
+}

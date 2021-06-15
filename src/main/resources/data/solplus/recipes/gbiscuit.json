@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "www",
+    "wew",
+    "www"
+  ],
+  "key":
+  {
+    "w":
+    {
+      "item": "minecraft:wheat"
+    },
+    "e":
+    {
+      "item": "minecraft:egg"
+    }
+  },
+  "result":
+  {
+    "item": "solplus:gbiscuit",
+    "count": 4
+  }
+}

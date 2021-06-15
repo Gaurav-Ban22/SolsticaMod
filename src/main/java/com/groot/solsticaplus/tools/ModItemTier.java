@@ -12,6 +12,10 @@ public enum ModItemTier implements IItemTier {
 
         return Ingredient.fromItems(RegistryHandler.SOLSTICA.get());
 
+    }),
+
+    LIFESTEAL(3, 500, 6.0f, 3.0f, 19, () -> {
+        return Ingredient.fromItems(RegistryHandler.SOLSTICA.get());
     });
 
     private final int harvestLevel;

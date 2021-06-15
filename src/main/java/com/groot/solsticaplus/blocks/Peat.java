@@ -12,7 +12,9 @@ public class Peat extends Block {
                 .hardnessAndResistance(3.0f, 3.0f)
                 .sound(SoundType.SAND)
                 .harvestLevel(2)
+                .setRequiresTool()
                 .harvestTool(ToolType.SHOVEL)
+                .setLightLevel(value -> 15)
 
         );
     }

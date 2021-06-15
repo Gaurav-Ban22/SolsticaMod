@@ -6,8 +6,7 @@ import com.groot.solsticaplus.blocks.BlockItemBase;
 import com.groot.solsticaplus.blocks.Peat;
 import com.groot.solsticaplus.blocks.SolBlende;
 import com.groot.solsticaplus.blocks.SolBlock;
-import com.groot.solsticaplus.items.ItemBase;
-import com.groot.solsticaplus.items.SolBread;
+import com.groot.solsticaplus.items.*;
 import com.groot.solsticaplus.tools.ModItemTier;
 import com.groot.solsticaplus.world.biomes.SolBiome;
 import net.minecraft.block.Block;
@@ -32,9 +31,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class RegistryHandler {
 
-    public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, SolsticaPlus.MOD_ID);
-    public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, SolsticaPlus.MOD_ID);
-    public static final DeferredRegister<Biome> BIOMES = new DeferredRegister<>(ForgeRegistries.BIOMES, SolsticaPlus.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SolsticaPlus.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, SolsticaPlus.MOD_ID);
+    public static final DeferredRegister<Biome> BIOMES = DeferredRegister.create(ForgeRegistries.BIOMES, SolsticaPlus.MOD_ID);
 
 
     public static void init() {
@@ -45,8 +44,23 @@ public class RegistryHandler {
 
     // Items
     public static final RegistryObject<Item> SOLSTICA = ITEMS.register("solstica", ItemBase::new);
+    public static final RegistryObject<Item> MINER = ITEMS.register("mscroll", ItemBase::new);
     public static final RegistryObject<SolBread> SOLBREAD = ITEMS.register("solbread", SolBread::new);
+    public static final RegistryObject<GrainedBiscuit> GBISCUIT = ITEMS.register("gbiscuit", GrainedBiscuit::new);
+    public static final RegistryObject<EggedCookie> ECOOKIE = ITEMS.register("ecookie", EggedCookie::new);
+    public static final RegistryObject<Rice> RICE = ITEMS.register("rice", Rice::new);
+    public static final RegistryObject<MiracleRice> MIRRICE = ITEMS.register("mirrice", MiracleRice::new);
+    public static final RegistryObject<OakRice> OAKRICE = ITEMS.register("oakrice", OakRice::new);
+    public static final RegistryObject<PotatoRice> PRICE = ITEMS.register("price", PotatoRice::new);
+    public static final RegistryObject<GoldenRice> GRICE = ITEMS.register("grice", GoldenRice::new);
+    public static final RegistryObject<IronRice> IRICE = ITEMS.register("irice", IronRice::new);
+    public static final RegistryObject<LapisRice> LRICE = ITEMS.register("lrice", LapisRice::new);
+    public static final RegistryObject<CarApple> CAPPLE = ITEMS.register("capple", CarApple::new);
+    public static final RegistryObject<MSponge> MSPONGE = ITEMS.register("msponge", MSponge::new);
     public static final RegistryObject<Item> REGAMU = ITEMS.register("regenam", ItemBase::new);
+    public static final RegistryObject<Item> JSCROLL = ITEMS.register("jscroll", ItemBase::new);
+    public static final RegistryObject<Item> EUCALYPTYDE = ITEMS.register("euc", ItemBase::new);
+    public static final RegistryObject<Item> IREPAIR = ITEMS.register("irepair", ItemBase::new);
 
 
     // Blocks
@@ -63,7 +77,10 @@ public class RegistryHandler {
 
     //tools
     public static final RegistryObject<SwordItem> SOLSTICA_SWORD = ITEMS.register("solsword", () ->
-            new SwordItem(ModItemTier.SOLSTICA, 3, -3F, new Item.Properties().group(ItemGroup.COMBAT)));
+            new SwordItem(ModItemTier.SOLSTICA, 3, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)));
+
+    public static final RegistryObject<SwordItem> LIFEBLADE = ITEMS.register("lifesword", () ->
+            new SwordItem(ModItemTier.LIFESTEAL, 3, -3.5F, new Item.Properties().group(ItemGroup.COMBAT)));
 
     //Armor
     public static final RegistryObject<ArmorItem> SOLSTICA_HELMET = ITEMS.register("solhelm", () ->
@@ -81,12 +98,12 @@ public class RegistryHandler {
 
 
     //biomes
-    public static final RegistryObject<Biome> SOLBIOME = BIOMES.register("solbiome", () -> new SolBiome(new Biome.Builder().precipitation(Biome.RainType.RAIN).scale(1.2f).temperature(0.6f).waterColor(16776563).surfaceBuilder(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig(Blocks.GLOWSTONE.getDefaultState(), Blocks.STONE.getDefaultState(), Blocks.SAND.getDefaultState())).category(Biome.Category.PLAINS).downfall(0.7f).depth(0.12f).parent(null).waterFogColor(16776563)));
+    //public static final RegistryObject<Biome> SOLBIOME = BIOMES.register("solbiome", () -> new SolBiome(new Biome.Builder().precipitation(Biome.RainType.RAIN).scale(1.2f).temperature(0.6f).surfaceBuilder(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig(Blocks.GLOWSTONE.getDefaultState(), Blocks.STONE.getDefaultState(), Blocks.SAND.getDefaultState())).category(Biome.Category.PLAINS).downfall(0.7f).depth(0.12f).parent(null)));
 
-    public static void registerBiomes() {
-        registerBiome(SOLBIOME.get(), BiomeDictionary.Type.PLAINS, BiomeDictionary.Type.OVERWORLD);
-        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(SOLBIOME.get(), 100));
-    }
+    //public static void registerBiomes() {
+        //registerBiome(SOLBIOME.get(), BiomeDictionary.Type.PLAINS, BiomeDictionary.Type.OVERWORLD);
+        //BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(SOLBIOME.get(), 100));
+    //}
 
     private static void registerBiome(Biome biome, BiomeDictionary.Type... types ) {
 

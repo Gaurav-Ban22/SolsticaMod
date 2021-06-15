@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "gw ",
+    "ww ",
+    "   "
+  ],
+  "key":
+  {
+    "g":
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    "w":
+    {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result":
+  {
+    "item": "solplus:msponge",
+    "count": 1
+  }
+}

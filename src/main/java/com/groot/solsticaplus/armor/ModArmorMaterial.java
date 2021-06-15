@@ -14,7 +14,7 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements IArmorMaterial {
 
-    SOLSTICA(SolsticaPlus.MOD_ID + ":solstica", 24, new int[] { 2, 5, 6, 2 }, 19, SoundEvents.BLOCK_BAMBOO_BREAK, 0.5f, () -> {return Ingredient.fromItems(RegistryHandler.SOLSTICA.get());});
+    SOLSTICA(SolsticaPlus.MOD_ID + ":solstica", 24, new int[] { 2, 5, 6, 2 }, 19, SoundEvents.BLOCK_BAMBOO_BREAK, 0.5f, () -> {return Ingredient.fromItems(RegistryHandler.SOLSTICA.get());}, 0);
 
 
 
@@ -26,8 +26,9 @@ public enum ModArmorMaterial implements IArmorMaterial {
     private final SoundEvent soundevent;
     private final float toughness;
     private final Supplier<Ingredient> repairMaterial;
+    private final float knockbackresistance;
 
-    ModArmorMaterial(String name, int maxDamageFactor, int[] damageReductionAmountArray, int enchantability, SoundEvent soundevent, float toughness, Supplier<Ingredient> repairMaterial) {
+    ModArmorMaterial(String name, int maxDamageFactor, int[] damageReductionAmountArray, int enchantability, SoundEvent soundevent, float toughness, Supplier<Ingredient> repairMaterial, float knockbackresistance) {
 
         this.name = name;
         this.maxDamageFactor = maxDamageFactor;
@@ -36,6 +37,7 @@ public enum ModArmorMaterial implements IArmorMaterial {
         this.soundevent = soundevent;
         this.toughness = toughness;
         this.repairMaterial = repairMaterial;
+        this.knockbackresistance = knockbackresistance;
 
     }
 
@@ -73,5 +75,10 @@ public enum ModArmorMaterial implements IArmorMaterial {
     @Override
     public float getToughness() {
         return this.toughness;
+    }
+
+    @Override
+    public float func_230304_f_() {
+        return this.knockbackresistance;
     }
 }

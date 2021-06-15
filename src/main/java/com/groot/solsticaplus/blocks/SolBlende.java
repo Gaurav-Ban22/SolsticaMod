@@ -17,6 +17,8 @@ public class SolBlende extends OreBlock {
                 .sound(SoundType.ANVIL)
                 .harvestLevel(3)
                 .harvestTool(ToolType.PICKAXE)
+                .setLightLevel(value -> 15)
+                .setRequiresTool()
 
 
         );
